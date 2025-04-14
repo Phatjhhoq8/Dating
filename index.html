@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ĐI chơi thôi</title>
+    <link rel="stylesheet" href="css/valentine.css" />
+  </head>
+  <body>
+    <div id="valentineQuestion"><b>Em đi chơi với anh nhé?</b></div>
+    <div class="button-container" id="buttonContainer">
+      <button class="answerButton" id="yesButton" onclick="location.href='thankyou.html'">
+        Có
+      </button>
+      <button class="answerButton" id="noButton">Không</button>
+    </div>
+    <br />
+    <img src="hangout.gif" alt="cat asking question" class="responsive" />
+
+    <script>
+      var cnt=0;
+      document
+        .getElementById("noButton")
+        .addEventListener("click", function () {
+          cnt++;
+          var container = document.getElementById("buttonContainer");
+          var yesButton = document.getElementById("yesButton");
+          var noButton = document.getElementById("noButton");
+          container.innerHTML = '';
+          if(cnt==3) {
+            container.appendChild(yesButton.cloneNode(true));
+            container.appendChild(yesButton.cloneNode(true));
+          }
+          else if(cnt&1) {
+            container.appendChild(noButton);
+            container.appendChild(yesButton);
+          }else {
+            container.appendChild(yesButton);
+            container.appendChild(noButton);
+          } 
+        });
+    </script>
+  </body>
+</html>
