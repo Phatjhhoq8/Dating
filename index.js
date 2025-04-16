@@ -102,7 +102,7 @@ function choseFood() {
         </div>
       </div>
       <button class="button" onclick='choseDessert()'>
-        Tiếp UWU
+        Tiếp
       </button>`;
     }
 }
@@ -152,7 +152,7 @@ function choseDessert() {
       </div>
     </div>
     <button class="button" onclick='choseActivity()'>
-      Tiếp UWU
+      Tiếp
     </button>`;
 }
 function choseActivity() {
