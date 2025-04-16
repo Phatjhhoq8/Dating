@@ -5,40 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ĐI chơi thôi</title>
     <link rel="stylesheet" href="css/valentine.css" />
+    <link rel="stylesheet" href="css/lastpage.css" />
+    <link rel="stylesheet" href="css/date.css" />
+    <link rel="stylesheet" href="css/food.css" />
+    <link rel="stylesheet" href="css/dessert.css" />
+    <link rel="stylesheet" href="css/activities.css" />
   </head>
   <body>
-    <div id="valentineQuestion"><b>Em đi chơi với anh nhé?</b></div>
-    <div class="button-container" id="buttonContainer">
-      <button class="answerButton" id="yesButton" onclick="location.href='thankyou.html'">
-        Có
-      </button>
-      <button class="answerButton" id="noButton">Không</button>
-    </div>
-    <br />
-    <img src="hangout.gif" alt="cat asking question" class="responsive" />
-
-    <script>
-      var cnt=0;
-      document
-        .getElementById("noButton")
-        .addEventListener("click", function () {
-          cnt++;
-          var container = document.getElementById("buttonContainer");
-          var yesButton = document.getElementById("yesButton");
-          var noButton = document.getElementById("noButton");
-          container.innerHTML = '';
-          if(cnt==3) {
-            container.appendChild(yesButton.cloneNode(true));
-            container.appendChild(yesButton.cloneNode(true));
-          }
-          else if(cnt&1) {
-            container.appendChild(noButton);
-            container.appendChild(yesButton);
-          }else {
-            container.appendChild(yesButton);
-            container.appendChild(noButton);
-          } 
-        });
-    </script>
+    <div class="container"></div>
+    <form id="googleForm" action="https://docs.google.com/forms/d/e/1FAIpQLScrQjDOrEmtZdO4y27HFVPAbEiJDSS8YYK6XAmKtWpQLl0jVQ/formResponse" method="POST" target="hidden_iframe">
+      <input type="hidden" name="entry.319995756" id="dateInput">
+      <input type="hidden" name="entry.750882655" id="timeInput">
+      <input type="hidden" name="entry.172197659" id="foodInput">
+      <input type="hidden" name="entry.1195736025" id="dessertInput">
+      <input type="hidden" name="entry.114906287" id="activityInput">
+    </form>
+    
+    <iframe name="hidden_iframe" style="display:none;"></iframe>
+    
+    <script src="index.js"></script>
   </body>
 </html>

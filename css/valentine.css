@@ -7,7 +7,7 @@ body {
 }
 
 img {
-  height: 400px;
+  height: 360px;
   width: auto;
   padding: 10px;
 }
@@ -42,4 +42,8 @@ img {
   gap: 10px;
   justify-content: center;
   margin-top: 20px;
+}
+.talk {
+  position: relative;
+  top: 100px;
 }
