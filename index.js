@@ -34,9 +34,11 @@ document
     } 
 });
 function ready() {
-  main.innerHTML = `<button class="button talk" onclick='setDay()'>Cùng nhau lên lịch nè!!</button>
+  main.innerHTML = `<div class="center-container">
+  <button class="button talk" onclick="setDay()">Cùng nhau lên lịch nè!!</button>
   <br/>
-  <img id="rizz" src="valentine_transparent.gif" width="500" alt="rizzler god" class="responsive" />`;
+  <img id="rizz" src="valentine_transparent.gif" width="500" alt="rizzler god" class="responsive" />
+</div>`;
 }
 function setDay() {
     main.innerHTML = `<h1 title="choose a date">Em rảnh vào hôm nào ...</h1>
