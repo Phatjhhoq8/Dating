@@ -64,15 +64,13 @@ function choseFood() {
         alert("Em chưa chọn giờ kìa!!!");
     }else if(dating.getTime()<now.getTime()) {
         alert("Chọn ngày/giờ không hợp lệ rùiii!!!");
-        console.log(dating.getTime())
-        console.log(now.getTime())
     }else {
         main.innerHTML=`<div id="foodquestion">
         <b>Em muốn ăn món gì?</b>
       </div>
       <div class="food-selection">
         <div class="food-item">
-          <img src="food/an_vat.jpeq" alt="Ăn vặt" />
+          <label><img src="food/an_vat.jpeq" alt="Ăn vặt" />
           <label
             ><input
               type="checkbox"
@@ -80,31 +78,31 @@ function choseFood() {
               value="an_vat"
             />
             Ăn vặt</label
-          >
+          ></label>
         </div>
         <div class="food-item">
-          <img src="food/mi_cay.jpeq" alt="Mì cay" />
+          <label><img src="food/mi_cay.jpeq" alt="Mì cay" />
           <label
             ><input type="checkbox" name="food" value="mi_cay" /> Mì cay</label
-          >
+          ></label>
         </div>
         <div class="food-item">
-          <img src="food/bun_dau.jpeg" alt="Bún đậu" />
+          <label><img src="food/bun_dau.jpeg" alt="Bún đậu" />
           <label
             ><input type="checkbox" name="food" value="bun_dau" /> Bún đậu</label
-          >
+          ></label>
         </div>
         <div class="food-item">
-          <img src="food/pizza.jpeg" alt="pizza" />
-          <label><input type="checkbox" name="food" value="pizza" /> Pizza</label>
+          <label><img src="food/pizza.jpeg" alt="pizza" />
+          <label><input type="checkbox" name="food" value="pizza" /> Pizza</label></label>
         </div>
         <div class="food-item">
-          <img src="food/mi_tron.jpeg" alt="Mì trộn" />
-          <label><input type="checkbox" name="food" value="mi_tron" /> Mì trộn</label>
+          <label><img src="food/mi_tron.jpeg" alt="Mì trộn" />
+          <label><input type="checkbox" name="food" value="mi_tron" /> Mì trộn</label></label>
         </div>
         <div class="food-item">
-          <img src="food/y_em.jpg" alt="other" />
-          <label><input type="checkbox" name="food" value="other" />Món khác: <input type="text"></label>
+          <label><img src="food/y_em.jpg" alt="other" />
+          <label><input type="checkbox" name="food" value="other" />Món khác: <input type="text"></label></label>
         </div>
       </div>
       <button class="button" onclick='choseDessert()'>
@@ -127,34 +125,34 @@ function choseDessert() {
 
     <div class="dessert-selection">
       <div class="dessert-item">
-        <img src="food/boba.jpeg" alt="boba" />
+        <label><img src="food/boba.jpeg" alt="boba" />
         <label
           ><input type="checkbox" name="dessert" value="boba" /> Trà sữa</label
-        >
+        ></label>
       </div>
       <div class="dessert-item">
-        <img src="food/che.jpeg" alt="che" />
-        <label><input type="checkbox" name="dessert" value="che" /> Chè</label>
+        <label><img src="food/che.jpeg" alt="che" />
+        <label><input type="checkbox" name="dessert" value="che" /> Chè</label></label>
       </div>
       <div class="dessert-item">
-        <img src="food/randombun.jpeg" alt="Bánh ngọt" />
+        <label><img src="food/randombun.jpeg" alt="Bánh ngọt" />
         <label
           ><input type="checkbox" name="dessert" value="banh_ngot" /> Bánh ngọt</label
-        >
+        ></label>
       </div>
       <div class="dessert-item">
-        <img src="food/taiyaki.jpeg" alt="Kem" />
+        <label><img src="food/taiyaki.jpeg" alt="Kem" />
         <label
           ><input type="checkbox" name="dessert" value="kem" />
           Kem</label
-        >
+        ></label>
       </div>
       <div class="dessert-item">
-        <img src="food/y_em.jpg" alt="Món khác" />
+        <label><img src="food/y_em.jpg" alt="Món khác" />
         <label
           ><input type="checkbox" name="dessert" value="other" />
           Món khác: <input type="text"></label
-        >
+        ></label>
       </div>
     </div>
     <button class="button" onclick='choseActivity()'>
@@ -175,54 +173,54 @@ function choseActivity() {
     main.innerHTML=`<div id="activityquestion"><b>Em muốn làm gì sau đó?</b></div>
     <div class="activities-selection">
       <div class="activity-item">
-        <img src="activities/arcade.jpeg" alt="khu vui choi" />
+        <label><img src="activities/arcade.jpeg" alt="khu vui choi" />
         <label
           ><input
             type="checkbox"
             name="activities"
             value="play_game"
           />Khu vui chơi</label
-        >
+        ></label>
       </div>
       <div class="activity-item">
-        <img src="activities/cinema.jpeg" alt="Xem phim" />
+        <label><img src="activities/cinema.jpeg" alt="Xem phim" />
         <label
           ><input
             type="checkbox"
             name="activities"
             value="xem_phim"
           />Xem phim</label
-        >
+        ></label>
       </div>
       <div class="activity-item">
-        <img src="activities/keramika.jpeg" alt="Tô tượng" />
+        <label><img src="activities/keramika.jpeg" alt="Tô tượng" />
         <label
           ><input
             type="checkbox"
             name="activities"
             value="to_tuong"
           />Tô tượng</label
-        >
+        ></label>
       </div>
       <div class="activity-item">
-        <img src="activities/park.jpeg" alt="park.jpeg" />
+        <label><img src="activities/park.jpeg" alt="park.jpeg" />
         <label
           ><input
             type="checkbox"
             name="activities"
             value="park.jpeg"
           />Đi dạo công viên</label
-        >
+        ></label>
       </div>
       <div class="activity-item">
-        <img src="food/y_em.jpg" alt="Ý của em" />
+        <label><img src="food/y_em.jpg" alt="Ý của em" />
         <label
           ><input
             type="checkbox"
             name="activities"
             value="other"
           />Nơi khác: <input type="text"></label
-        >
+        ></label>
       </div>
     </div>
     <button class="button" onclick='goLastPage()'>
