@@ -54,12 +54,18 @@ function setDay() {
 function choseFood() {
     dateDating=document.querySelector('input[type="date"]').value;
     timeDating=document.querySelector('input[type="time"]').value;
+    const dating = new Date(`${dateDating}T${timeDating}`);
+    const now = new Date();
     if(dateDating==''&&timeDating=='') {
         alert("Em chưa chọn ngày và giờ kìa!!!");
     }else if(dateDating=='') {
         alert("Em chưa chọn ngày kìa!!!");
     }else if(timeDating=='') {
-        alert("Em chưa chọn giờ kìa!!!")
+        alert("Em chưa chọn giờ kìa!!!");
+    }else if(dating.getTime()<now.getTime()) {
+        alert("Chọn ngày/giờ không hợp lệ rùiii!!!");
+        console.log(dating.getTime())
+        console.log(now.getTime())
     }else {
         main.innerHTML=`<div id="foodquestion">
         <b>Em muốn ăn món gì?</b>
