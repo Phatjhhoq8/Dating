@@ -33,14 +33,21 @@ document
     container.appendChild(noButton);
     } 
 });
+let hasClicked = false;
 function ready() {
   main.innerHTML = `<div class="center-container">
   <button class="button talk" onclick="setDay()">Cùng nhau lên lịch nè!!</button>
   <br/>
   <img id="rizz" src="valentine_transparent.gif" width="500" alt="rizzler god" class="responsive" />
 </div>`;
+  setTimeout(() => {
+    if (!hasClicked) {
+      setDay();
+    }
+  }, 5000);
 }
 function setDay() {
+    hasClicked=true;
     main.innerHTML = `<h1 title="choose a date">Em rảnh vào hôm nào ...</h1>
       <h2>Em chọn 1 ngày nhé ^^</h2>
       <div>
